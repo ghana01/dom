@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update profile pic</title>
+</head>
+<body>
+    <h1>Update profile picture</h1>
+    <input type="file" id="file-picker" onchange="changeprofile()">
+    <h3>your profile picture</h3>
+    <img src="" alt=" no profile picture" id="image">
+
+    <script>
+        const filepicker = document.getElementById('file-picker')
+        const image= document.getElementById('image')
+         function changeprofile(){
+            const reader = new FileReader();
+
+            reader.onload= function (e){
+                image.src=e.target.result
+            };
+            reader.readAsDataURL(filepicker.files[0]);
+
+
+         }
+
+    </script>
+</body>
+</html>

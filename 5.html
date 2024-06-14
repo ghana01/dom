@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        button{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Your image is visible</h1>
+    <button onclick="toggleimage ()" id="btn">toggle image</button>
+    <img src="https://images.stockcake.com/public/6/6/e/66e6d12d-e5b6-4f85-95e4-02c37ca46d2d_large/vr-business-simulation-stockcake.jpg" 
+    alt="img" id="img">
+    <script>
+        const text=document.getElementById("text")
+        const image= document.getElementById("img")
+        function toggleimage () {
+            if(image.style.opacity==0){
+                image.style.opacity=100;
+                text.innerText="your image is vissble";
+            }
+            else{
+                image.style.opacity=0;
+                text.innerText="your image is hidden";
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
